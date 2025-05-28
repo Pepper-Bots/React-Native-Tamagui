@@ -12,10 +12,10 @@ import { ThemedView } from '@/components/ThemedView'
 import { IconSymbol } from '@/components/ui/IconSymbol'
 
 const AVATARS = [
-    require('@/assets/images/avatars/avataaars.png'),
-    require('@/assets/images/avatars/avataaars.png'),
-    require('@/assets/images/avatars/avataaars.png'),
-    require('@/assets/images/avatars/avataaars.png'),
+    require('@/assets/images/avatars/avataaars1.png'),
+    require('@/assets/images/avatars/avataaars2.png'),
+    require('@/assets/images/avatars/avataaars3.png'),
+    require('@/assets/images/avatars/avataaars4.png'),
     // Ajoute autant d’avatars rigolos que tu veux !
 ]
 

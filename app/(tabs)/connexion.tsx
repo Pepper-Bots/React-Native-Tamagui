@@ -29,7 +29,7 @@ export default function ConnexionScreen() {
         },
     })
 
-    const onFormulaireValide =  (donneesFormulaire: FormData) => {
+    const onFormulaireValide = async (data: FormData) => {
         setLoading(true);
         setLoginError('');
         const options: RequestInit = {
@@ -37,7 +37,7 @@ export default function ConnexionScreen() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(donneesFormulaire)
+            body: JSON.stringify(data)
         }
 
         try {
