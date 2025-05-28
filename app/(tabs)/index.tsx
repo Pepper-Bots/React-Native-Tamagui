@@ -5,8 +5,33 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import {useEffect} from "react";
+import * as SecureStore from "expo-secure-store";
+import {router} from "expo-router";
+
 
 export default function HomeScreen() {
+
+    useEffect(() => {
+
+        const jwt = SecureStore.getItem('token');
+
+        if (jwt) {
+            const options: RequestInit = {
+                method: 'GET',
+                headers: {
+                    "Authorization": "Bearer " + jwt
+                },
+            }
+
+            fetch(process.env.EXPO_PUBLIC_API_URL + 'products', options)
+                .then(response => response.json())
+                .then(products => {
+                    console.log(products);
+                })
+        }
+    }, []);
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
