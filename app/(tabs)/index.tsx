@@ -15,6 +15,7 @@ export default function HomeScreen() {
     useEffect(() => {
 
         const jwt = SecureStore.getItem('token');
+        console.log(jwt);
 
         if (jwt) {
             const options: RequestInit = {
