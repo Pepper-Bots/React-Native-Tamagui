@@ -24,6 +24,9 @@ export default function HomeScreen() {
             })
     }, []);
 
+    const onPressProduct = (id: number) =>
+        router.push(`/product/${id}`)
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -33,16 +36,16 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
-      <ThemedView style={styles.titleContainer}>
+      <ThemedView style={[styles.titleContainer, {display: 'flex', flexDirection: 'column'}]}>
           {products.map(product  => (
               <ProductCard key={product.id}
+                onPress={() => onPressProduct(product.id)}
                 product={product}
                 animation="bouncy"
                 size="$4"
                 width={250}
                 height={300}
                 scale={0.9}
-               style={{display: 'flex', flexDirection: 'column'}}
                hoverStyle={{scale : 0.925}}
                pressStyle={{scale : 0.875}}
                />

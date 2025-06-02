@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "glue-test-theBest",
-    "slug": "glue-test-theBest",
+    "slug": "gluetest-thebest",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3448266f-2d32-4cde-b18b-6a30513fd85d"
+      }
+    },
+    "owner": "heleneriz"
   }
 }
